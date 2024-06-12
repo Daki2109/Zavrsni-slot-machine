@@ -1,0 +1,30 @@
+#pragma once
+typedef struct {
+	char ime[20];
+	int stanje;
+	int ulog;
+	int dobitak;
+	int maxdobitak;
+}IGRAC;
+extern int brojvrtnji;
+int random(int, int);
+void PrintP(char[5][3]);
+int provjera(char[5][3]); 
+int compareByStanje(const void* a, const void* b);
+void provjeraStanja(IGRAC* igrac);
+void promijenaUloga(IGRAC* igrac);
+char Simboli();
+int factorial(int num);
+void readPlayerDataFromFile(const char* filename, IGRAC* igrac, int* numRecords);
+void spin(IGRAC* igrac, char polje[5][3]);
+void clearDobitciFile(const char* filename);
+void writePlayerDataToFile(const char* filename, const IGRAC* igrac);
+void writeSortedPlayersToFile(const char* filename, IGRAC* igraci, int broj_igraca);
+void sortPlayersByStanje(IGRAC* igraci, int broj_igraca);
+void readPlayersFromFile(const char* filename, IGRAC** igraci, int* broj_igraca);
+void writePlayersToFile(const char* filename, IGRAC* igraci, int broj_igraca);
+void sortPlayersByUlog(IGRAC* igraci, int broj_igraca);
+IGRAC* findPlayerByName(IGRAC* igraci, int broj_igraca, const char* ime);
+int compareByUlog(const void* a, const void* b);
+int compareByName(const void* a, const void* b);
+void addNewPlayer(IGRAC** igraci, int* broj_igraca, const char* filename);
