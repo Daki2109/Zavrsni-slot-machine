@@ -6,6 +6,8 @@
 #include<string.h>
 #include"Funkcije.h"
 #define N 150
+#define y 5
+#define z 3
 int main() {
 	int stanje[N];
 	int dobitak[N];
@@ -13,7 +15,7 @@ int main() {
 	int menu;
 	int a;
 	int broj_igraca = 0;
-	char polje[5][3];
+	char polje[y][z];
 	int b;
 	const char* dataFilename = "players.bin";
 	int validinput = 0;
